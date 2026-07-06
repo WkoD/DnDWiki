@@ -27,7 +27,7 @@ jobs:
           ':(exclude)tiddlers/Erfahrungspunkte.tid' \
           ':(exclude)tiddlers/Spieler.tid' \
           ':(exclude)tiddlers/TBC_Abenteuer.tid' \
-          tiddlywiki.info .github CLAUDE.md
+          tiddlywiki.info .github CLAUDE.md README.md
         git diff --cached --quiet || git commit -m "Sync technische Schicht von DnDWiki-Base"
         git push origin master
     - name: Dispatch build
