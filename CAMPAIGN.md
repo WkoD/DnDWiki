@@ -1,10 +1,9 @@
 <!--
-CAMPAIGN.md — SKELETT-TEMPLATE (Base/DnDWiki).
+CAMPAIGN.md — SKELETT-TEMPLATE (DnDWiki-Vorlage).
 Dies ist die kanonische Vorlage. In DnDWiki bleibt sie leer/generisch.
-Jeder Kampagnen-Fork füllt seine EIGENE Kopie aus.
-Diese Datei ist NICHT Teil des Sync — sie wird nie in die Forks verteilt und
-überschreibt dort nichts. CAMPAIGN.md niemals in die Sync-Pfadliste von
-repo-sync.yml aufnehmen.
+Jede Kampagne füllt beim 1:1-Kopieren der Vorlage ihre EIGENE Kopie aus.
+Diese Datei ist kampagnen-eigen — sie wird nicht zwischen Repos verteilt und
+überschreibt anderswo nichts.
 -->
 
 # CAMPAIGN.md

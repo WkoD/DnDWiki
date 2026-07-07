@@ -66,7 +66,7 @@ Standard-`.tid`-Format (Feld-Header, Leerzeile, Fließtext). Relevante Felder:
 Jeder Tiddler bekommt typischerweise zwei Arten von Tags:
 
 1. Typ-Tag (template-weit gültig): `Person`, `Ereignis`, `Ort`, `Organisation`, `Artefakt`, `Gegenstand`, `Buch`, `Gott`, `Material`, `Abenteuer`, `Karte`, `Spieler`, `Index`, `Information`.
-2. Fraktions-/Handlungsstrang-Tag als thematischer Hub — die konkreten Namen sind **kampagnenspezifisch** und stehen nicht hier (siehe die `CAMPAIGN.md` bzw. die Kategorie-Hub-Tiddler des jeweiligen Forks).
+2. Fraktions-/Handlungsstrang-Tag als thematischer Hub — die konkreten Namen sind **kampagnenspezifisch** und stehen nicht hier (siehe die `CAMPAIGN.md` bzw. die Kategorie-Hub-Tiddler des jeweiligen Wikis).
 
 ### Kampagnen-Konventionen (nicht offensichtlich, aber wichtig)
 
