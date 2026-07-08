@@ -1,0 +1,9 @@
+caption: Live
+edges.fields: [all[]] -[[tags]] -[[list]]
+edges.functions: links
+filter: [list[$:/StoryList]multitag[Gott,Organisation,Person,Spieler,Ort,Ereignis,Artefakt,Buch,Gegenstand,Material]]
+template: $:/dndwiki/graph/templates/dnd-graph
+title: $:/graph/Default
+type: application/json
+
+{}
