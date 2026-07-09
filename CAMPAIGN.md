@@ -23,7 +23,7 @@ nicht veraltet. Den echten Stand immer live aus den Tiddlern lesen.
 - **Spieler <-> Charakter:** <!-- reale Spielernamen <-> Charaktere; leer lassen, wenn n/a -->
 - **Hausregeln:** <!-- abweichende Regeln -->
 
-## Konventionen (vom DM festzulegen)
+## Konventionen (DM-Entscheidung)
 
 Das Format bietet mehrere optionale Mechanismen an. Für jeden legt der DM fest,
 ob/wie er ihn für diese Kampagne nutzt - Claude richtet sich danach:

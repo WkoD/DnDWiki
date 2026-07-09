@@ -26,7 +26,7 @@ Abhängigkeiten:
 5. `tiddlers/Datum.tid` (In-World-Startdatum) und `tiddlers/Erfahrungspunkte.tid`
    (Start-XP, meist `0`) setzen.
 6. `CAMPAIGN.md` ausfüllen - kampagnenspezifischer Kontext für Claude (Identität,
-   Tisch-Meta); Anleitung dazu im Dateikopf.
+   Tisch-Meta, Konventionen); Anleitung dazu im Dateikopf.
 7. Lore-Content unter `tiddlers/`, Bilder unter `images/`, PDFs unter `data/Buch/`
    ergänzen.
 8. Repo auf GitHub pushen; `.github/workflows/npm-build-pages.yml` baut und

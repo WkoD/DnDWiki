@@ -100,8 +100,7 @@ kopiert `data/`+`images/` dazu, deployt nach `gh-pages`.
   - Content-Tiddler: Dateiname = Titel, z. B. `Hafendorf.tid`.
   - System- und Datentiddler (`$`-Präfix, `Datum`, `Erfahrungspunkte`): siehe "System- und Datentiddler" unten.
   - Die Formatschicht (Makros, ViewTemplates, Hubs, tw5-graph-Schema) kommt aus dem Plugin `dndwiki-core` und liegt **nicht** als Datei im Wiki - dokumentiert im Repo `TiddlyDnD-Plugins`.
-- `images/` - nach Kategorie sortiert, deckungsgleich mit den Content-Tags: `Person` (NPC-Portraits), `Ort`, `Ereignis`, `Organisation`, `Gegenstand`, `Karte`, `Spieler`, `Design`. Kampagnenspezifische Unterordner zur
-reinen Datenablage (falls vorhanden): siehe `CAMPAIGN.md`.
+- `images/` - nach Kategorie sortiert, deckungsgleich mit den Content-Tags: `Person` (NPC-Portraits), `Ort`, `Ereignis`, `Organisation`, `Gegenstand`, `Karte`, `Spieler`, `Design`. Kampagnenspezifische Unterordner zur reinen Datenablage (falls vorhanden): siehe `CAMPAIGN.md`.
 - `data/Buch/` - In-World-Lore-PDFs.
 
 ### System- und Datentiddler
@@ -115,8 +114,8 @@ Technische Tiddler mit fester, vom Format vorgegebener Funktion (kein Lore-Conte
 | `$:/DefaultTiddlers` | Liste der Tiddler, die beim Öffnen des Wikis automatisch im Story-River angezeigt werden. |
 | `$:/graph/Default` (Caption "Live") | Graph-View: aktuell offene Tiddler (`$:/StoryList`) der Haupttypen, inkl. automatischer `links`-Kanten (Wikilinks). |
 | `$:/graph/Kosmogramm` | Graph-View: alle `Gott`/`Organisation`/`Person`/`Spieler`-Tiddler mit ihren Beziehungsfeldern. |
-| `$:/graph/Weltkarte` | Graph-View: alle `Ort`-Tiddler plus alle Personen/Götter/Spieler verbunden über die `ort`-Kante. |
-| `$:/graph/Gegenstände` | Graph-View: alle `Artefakt`/`Buch`/`Gegenstand`/`Material`-Tiddler plus ihre über `besitzer`/`erschaffer` verknüpften Besitzer/Erschaffer. |
+| `$:/graph/Weltkarte` | Graph-View: alle `Ort`-Tiddler plus alle Personen/Götter/Spieler mit gesetztem `ort`-Feld, verbunden über die `ort`-Kante. |
+| `$:/graph/Gegenstände` | Graph-View: `Artefakt`/`Buch`/`Gegenstand`/`Material`-Tiddler plus ihre über `besitzer`/`erschaffer` verknüpften Besitzer/Erschaffer. |
 | `Datum` | Body = aktuelles In-World-Kalenderdatum als reiner Wert; vom DM direkt editiert. |
 | `Erfahrungspunkte` | Body = aktueller XP-Gesamtstand als reine Zahl; vom DM direkt editiert. |
 
@@ -140,6 +139,33 @@ Standard-`.tid`-Format (Feld-Header, Leerzeile, Fließtext). Felder für Content
 - **Beziehungsfelder** (Listenfelder, Titel-referenzierend) - tragen das Beziehungsnetz für den Graphen: `ort`, `mitglied`, `ehemals`, `anfuehrer`, `patron`, `unter`, `familie`, `allianz`, `freundschaft`, `feindschaft` (Person/Org/Gott) sowie `besitzer`/`erschaffer` (Gegenstände). Symmetrische Felder (`familie`/`allianz`/`freundschaft`/`feindschaft`) stehen auf **beiden** Endpunkten.
 - `datum` - In-World-Kalenderdatum (nicht das reale Sitzungsdatum); wird für Kalenderanzeigen/-berechnungen genutzt.
 - Fließtext nutzt durchgehend `[[WikiLinks]]` zur expliziten Verlinkung zwischen Personen/Orten/Organisationen - das ist der primäre Vernetzungsmechanismus neben den Tags.
+
+### Zeitstempel bei Tiddler-Bearbeitung (`created`/`modified`)
+
+`created` ist der Erstellungszeitpunkt, `modified` der Zeitpunkt der letzten
+inhaltlichen Änderung. Format: UTC, `JJJJMMTTHHMMSSmmm` (17 Ziffern, z. B.
+`20241112143212015` = 2024-11-12 14:32:12.015 UTC) - so legt es TiddlyWiki
+selbst an, wenn im Browser bearbeitet wird.
+
+Bei Bearbeitung **außerhalb** von TiddlyWiki (IDE, Claude, Skripte) gilt
+dieselbe Pflege manuell:
+
+- **Neuer Tiddler:** `created` auf den echten aktuellen Zeitstempel setzen;
+  `modified` auf denselben Wert.
+- **Bestehender Tiddler wird inhaltlich verändert** - gilt für jeden Tiddler,
+  Content- wie System-/Datentiddler (Fließtext, Beziehungs-/Graph-Felder,
+  sonstige Felder wie `tags`/`bild`/`datum`, eine geänderte Graph-View-Filterzeile
+  usw.): `modified` auf den echten aktuellen Zeitstempel aktualisieren. `created`
+  bleibt unverändert.
+- **Ausnahme - keine Zeitstempel-Änderung:** technische Massenänderungen ohne
+  editorielle Entscheidung über den Inhalt einzelner Tiddler, z. B. ein
+  Frameworkwechsel wie die tw5-graph-Migration, die Felder/Schema mechanisch
+  über viele Tiddler umgeschrieben hat.
+- **Keine Ausnahme:** Batch-Aufgaben, die inhaltliche Entscheidungen **pro
+  Tiddler** treffen (z. B. Backlog "Link-Ergänzung als freelinks-Ersatz" oder
+  eine redundante Beziehungs-Kante entfernen), sind inhaltliche Änderungen -
+  auch wenn sie viele Tiddler in einem Lauf betreffen. Dort `modified` je
+  betroffenem Tiddler aktualisieren.
 
 ### Tag-Vokabular
 
