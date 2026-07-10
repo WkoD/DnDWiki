@@ -2,7 +2,7 @@ caption: Gegenstände
 edges.fields: [all[]] -[[tags]] -[[list]]
 edges.functions: [all[]] -[[links]] -[[transcludes]]
 filter: [tag[Artefakt]] [tag[Buch]] [tag[Gegenstand]] [tag[Material]] =[tag[Artefakt]get[besitzer]enlist-input[]] =[tag[Buch]get[besitzer]enlist-input[]] =[tag[Gegenstand]get[besitzer]enlist-input[]] =[tag[Material]get[besitzer]enlist-input[]] =[tag[Artefakt]get[erschaffer]enlist-input[]] =[tag[Buch]get[erschaffer]enlist-input[]] =[tag[Gegenstand]get[erschaffer]enlist-input[]] =[tag[Material]get[erschaffer]enlist-input[]] +[unique[]]
-template: $:/dndwiki/graph/templates/dnd-graph
+template: $:/plugins/dndwiki-core/graph/templates/dnd-graph
 title: $:/graph/Gegenstände
 type: application/json
 
