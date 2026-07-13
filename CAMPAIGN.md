@@ -43,6 +43,12 @@ ob/wie er ihn für diese Kampagne nutzt - Claude richtet sich danach:
   Render-Bequemlichkeit, kein Zugriffsschutz). Alternative: nicht nutzen. -->
 - **Kampagnenspezifische Ordner/Assets:** <!-- z. B. zusätzliche Unterordner unter
   images/ für externe Tools (VTT-Kampfkarten o. Ä.), falls genutzt. -->
+- **Erzählstil (Tempus):** <!-- Standardvorschlag: keine feste Vorgabe, DM legt
+  fest. Beispiel für eine mögliche Wahl: durchgängige Vergangenheitsform
+  (Präteritum) als Chronik-Stil, auch für andauernde Eigenschaften/Fakten -
+  impliziert dann nicht Tod/Nicht-Existenz. Übliche Ausnahmen dafür: wörtliche
+  Rede/Zitate, primäre In-World-Dokumente, TBC-Callout-Boxen, Trivia-Quiz-Blöcke. -->
+
 
 ## Story-Planungs-Workflow für Claude
 
