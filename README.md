@@ -35,5 +35,22 @@ Abhängigkeiten:
 
 Keine Ordner ausschließen - Formatschicht/Plugins kommen aus dem Pin.
 
+## Bearbeitung
+
+Lokal mit Live-Editing bearbeiten:
+
+```bash
+npm install    # einmalig: Engine + Formatschicht + Graph-Stack holen
+npm start      # Server auf http://localhost:8080 mit Live-Editing starten
+```
+
+Im Browser gemachte Änderungen werden automatisch als `.tid`-Dateien in
+`tiddlers/` zurückgeschrieben - kein manuelles Speichern nötig. Details/Konventionen:
+`CLAUDE.md` -> "Befehle & CI".
+
+## Veröffentlichung
+
+Die per CI nach `gh-pages` deployte Kopie ist **rein lesbar**.
+
 Weitere Doku: `CLAUDE.md` (Entwicklung/Konventionen), `CAMPAIGN.md`
 (kampagnenspezifisch).
